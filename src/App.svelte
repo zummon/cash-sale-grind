@@ -4,7 +4,6 @@
 
 	let l = data[""].label[""];
 	let q = data[""].q;
-	let qs = "";
 
 	const price = num => {
 	  const str = Number(num).toLocaleString(undefined, {
@@ -46,22 +45,6 @@
 	  q = { ...data[q.lang].q, ...obj };
 	});
 
-	$: {
-	  let str = "?";
-	  Object.keys(q).forEach(key => {
-	    const values = q[key];
-	    if (values) {
-	      if (Array.isArray(values)) {
-	        values.forEach(value => {
-	          str += `${key}=${value}&`;
-	        });
-	        return;
-	      }
-	      str += `${key}=${values}&`;
-	    }
-	  });
-	  qs = str;
-	}
 	$: l = {
 	  ...data[q.lang].label[""],
 	  ...data[q.lang].label[q.doc]
