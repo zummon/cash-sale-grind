@@ -8,7 +8,6 @@
 	const price = num => {
 	  const str = Number(num).toLocaleString(undefined, {
 	    minimumFractionDigits: 2,
-	    maximumFractionDigits: 2
 	  });
 	  return num ? str : "";
 	};
