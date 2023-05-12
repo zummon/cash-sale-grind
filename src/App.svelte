@@ -62,14 +62,14 @@
 	{#each Object.keys(data) as lng, i (`lang-${i}`)}
 		<button class="font-bold p-2.5 {q.lang === lng ? "text-[#c34a36] bg-white cursor-default" : "text-white bg-[#c34a36] cursor-pointer"}" on:click={() => {
 			q.lang = lng
-			}}>
-			{lng =='th' ? 'ไทย' : 'Eng'}
+		}}>
+			{data[lng]['']}
 		</button>
 	{/each}
 	{#each Object.keys(data[q.lang].label) as dc, i (`doc-${i}`)}
 		<button class="font-bold p-2.5 {q.doc === dc ? "text-[#c34a36] bg-white cursor-default" : "text-white bg-[#c34a36] cursor-pointer"}" on:click={() => {
 			q.doc = dc
-			}}>
+		}}>
 			{data[q.lang].label[dc].title}
 		</button>
 	{/each}

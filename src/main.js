@@ -3,6 +3,7 @@ import "./style.css";
 
 let data = {
   "": {
+    "": "English",
     label: {
       "": {
         title: "Cash Sale",
@@ -44,6 +45,7 @@ let data = {
     },
   },
   th: {
+    "": "ภาษาไทย",
     label: {
       "": {
         title: "บิลเงินสด",
