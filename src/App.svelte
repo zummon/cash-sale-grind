@@ -172,7 +172,7 @@
 </div>
 
 <div class="flex flex-wrap justify-center items-center my-4 print:hidden">
-	<button class="font-bold text-white bg-[#c34a36] cursor-pointer p-2.5" on:click={() => window.print()}>
+	<button class="font-bold text-white bg-[#c34a36] cursor-pointer p-2.5" onclick="print()">
 	Print
 	</button>
 </div>
